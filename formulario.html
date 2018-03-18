@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		    Formulario
+	</title>
+</head>
+<body>
+<fieldset>
+ <legend>Cadastro de ususarios</legend>
+
+  <fieldset>
+  <legend>Dados do usuario</legend>
+ <table cellspacing="10">
+
+<script>
+function formatar(entrada, documento){
+  var i = documento.value.length; //escreve em i o valor atribuido ao campo
+  var saida = entrada.substring(0,1); //escreve em saida o valor que sera substituido(start = 0, end = 1    o valor sera #)
+  var texto = entrada.substring(i);//escreve em texto o valor da entrada com o valor maximo definido para o campo
+  
+  if (texto.substring(0,1) != saida)//se o texto for diferente da saida(#)...
+  {
+      documento.value += texto.substring(0,1); //adiciona o valor do texto(#->. ou - ou ( ou))
+  }
+  
+}
+</script>
+
+
+
+<!-- primeira linha -->
+   <td>
+    <label for="nome">Nome: </label>
+   </td>
+   <td align="left">
+    <input type="text" id="nome">
+   </td>
+
+   <td>
+    <label for="sobrenome">Sobrenome: </label>
+   </td>
+   <td align="left">
+    <input type="text" id="sobrenome">
+   </td>
+
+<!-- fim da primeira linha -->	
+<!-- segunda linha -->
+
+  <tr>
+   <td>
+    <label>Nascimento: </label>
+   </td>
+   <td align="left">
+    <input type="value" name="dia" size="2" maxlength="2" value="dd"> 
+   <input type="value" name="mes" size="2" maxlength="2" value="mm"> 
+   <input type="value" name="ano" size="4" maxlength="4" value="aaaa">
+   </td>
+  </tr>
+<!-- fim da segunda linha -->
+<!-- terceira linha -->
+  </tr>
+   <td>
+    <label for="identidade">Identidade: </label>
+   </td>
+   <td align="left">
+    <input type="text" id="identidade" size="13" maxlength="13" OnKeyPress="formatar('##-##.###.###', this)">
+   </td>
+
+   <td>
+    <label for="cpf">Cpf: </label>
+   </td>
+   <td align="left">
+    <input type="text" id="cpf" size="14" maxlength="14" OnKeyPress="formatar('###.###.###-##', this)">
+   </td>
+  </tr>
+<!-- fim da terceira linha -->
+<!-- quarta linha -->
+  </tr>
+   <td>
+    <label for="estadocivil">Estado Civil: </label>
+   </td>
+   <td align="left">
+   <!-- faz a mesma função dos fanucs -->
+    <select name="estado"> 
+    <option value="estadodefault">--</option> 
+    <option value="solteiro">Solteiro</option> 
+    <option value="casado">Casado</option> 
+	<option value="separado">Separado</option> 
+	<option value="divorciado">Divorciado</option> 
+	<option value="viúvo">Viúvo</option> 
+    </select>
+   </td>
+  </tr>
+<!-- fim da quarta linha -->
+<!-- quinta linha -->
+  </tr>
+   <td>
+    <label for="telefone">Telefone: </label>
+   </td>
+   <td align="left">
+    <input type="text" value="" id="telefone" size="12" maxlength="12" OnKeyPress="formatar('##-####-####', this)">
+   </td>
+
+   <td>
+    <label for="celular">Celular: </label>
+   </td>
+   <td align="left">
+    <input type="text"  id="celular" size="13" maxlength="13" OnKeyPress="formatar('##-#####-####', this)">
+   </td>
+  </tr>
+<!-- fim da quinta linha -->
+<!-- sexta linha -->
+  </tr>
+   <td>
+    <label for="email">Email: </label>
+   </td>
+   <td align="left">
+    <input type="text" id="email" >
+  </tr>
+<!-- fim da sexta linha -->
+ </table>
+</fieldset>
+
+
+  <fieldset>
+  <legend>Endereço do usuario</legend>
+ <table cellspacing="10">
+ <!-- primeira linha -->
+  <tr>
+   <td>
+    <label for="rua">Rua:</label>
+   </td>
+   <td align="left">
+    <input type="text" name="rua">
+   </td>
+
+   <td>
+    <label for="numero">Numero:</label>
+   </td>
+   <td align="left">
+    <input type="text" name="numero" size="5">
+   </td>
+  </tr>
+ <!-- fim da primeira linha -->
+ <!-- segunda linha -->
+  <tr>
+   <td>
+    <label for="bairro">Bairro: </label>
+   </td>
+   <td align="left">
+    <input type="text" name="bairro">
+   </td>
+
+   <td>
+    <label for="cidade">Cidade: </label>
+   </td>
+   <td align="left">
+    <input type="text" name="cidade">
+   </td>
+  </tr>
+   <!-- fim da segunda linha -->
+   <!-- terceira linha -->   
+  <tr>
+   <td>
+    <label for="estado">Estado:</label>
+   </td>
+   <td align="left">
+    <select name="estado"> 
+    <option value="ac">----</option> 
+    <option value="ac">Acre</option> 
+    <option value="al">Alagoas</option> 
+    <option value="am">Amazonas</option> 
+    <option value="ap">Amapá</option> 
+    <option value="ba">Bahia</option> 
+    <option value="ce">Ceará</option> 
+    <option value="df">Distrito Federal</option> 
+    <option value="es">Espírito Santo</option> 
+    <option value="go">Goiás</option> 
+    <option value="ma">Maranhão</option> 
+    <option value="mt">Mato Grosso</option> 
+    <option value="ms">Mato Grosso do Sul</option> 
+    <option value="mg">Minas Gerais</option> 
+    <option value="pa">Pará</option> 
+    <option value="pb">Paraíba</option> 
+    <option value="pr">Paraná</option> 
+    <option value="pe">Pernambuco</option> 
+    <option value="pi">Piauí</option> 
+    <option value="rj">Rio de Janeiro</option> 
+    <option value="rn">Rio Grande do Norte</option> 
+    <option value="ro">Rondônia</option> 
+    <option value="rs">Rio Grande do Sul</option> 
+    <option value="rr">Roraima</option> 
+    <option value="sc">Santa Catarina</option> 
+    <option value="se">Sergipe</option> 
+    <option value="sp">São Paulo</option> 
+    <option value="to">Tocantins</option> 
+   </select>
+   </td>
+  </tr>
+  <!-- fim da terceira linha -->
+   <!-- quarta linha -->   
+  <tr>
+   <td>
+    <label for="cep">CEP: </label>
+   </td>
+   <td align="left">
+       <input type="text"  id="celular" size="9" maxlength="9" OnKeyPress="formatar('#####-###', this)">
+   </td>
+  </tr>
+    <!-- fim da quarta linha -->
+
+	</table>
+</fieldset>
+</fieldset>
+</body>
+</html>
