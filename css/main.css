@@ -1,0 +1,32 @@
+﻿.button_green{
+background-color: #00ff89;
+}
+legend{
+background-color: #00ff89;
+}
+legend.sub{
+background-color: #000000;
+}
+code{
+	color: white;
+}
+td{
+	color: black;
+	font-family: "Arial Black", Gadget, sans-serif;
+}
+
+div {
+	font-family: "Comic Sans MS", cursive, sans-serif;
+}
+.borda{
+
+  width: 650px;
+  background-color: #028;
+  
+  border-radius: 1px 50px 1px 50px;
+  border: 25px solid black;
+
+  margin: 0 auto;
+
+}
+

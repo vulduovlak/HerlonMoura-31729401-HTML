@@ -4,14 +4,68 @@
 	<title>
 		    Formulario
 	</title>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="css/main.css">
+
 </head>
 <body>
-<fieldset>
- <legend>Cadastro de ususarios</legend>
+
+
+
+
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="#">Herlon REV3.0</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+
+      <li class="nav-item">
+        <a class="nav-link" href="index.html">Home<span class="sr-only">(current)</span></a>
+      </li>
+
+      <li class="nav-item active">
+        <a class="nav-link" href="formulario.html">Formulario</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="respostas.html">Questionario</a>
+      </li>
+      
+
+    </ul>
+  </div>
+</nav>
+
+
+
+
+
+
+
+
+
+<!-- tipo do layout -->
+<div class="container-fluid">
+
+<!-- cor do layout -->
+  <div class="p-3 mb-2 bg-primary text-white">
+
+
+<!-- centralização do layout -->
+    <div class="mx-auto" style="width: 400px;">
+      <fieldset>
+      <center><legend class="sub">Cadastro de ususarios</legend></center>
+    </div>
 
   <fieldset>
-  <legend>Dados do usuario</legend>
- <table cellspacing="10">
+  <legend >Dados do usuario</legend>
+  <center>
+  <table cellspacing="10">
 
 <script>
 function formatar(entrada, documento){
@@ -30,19 +84,19 @@ function formatar(entrada, documento){
 
 
 <!-- primeira linha -->
-   <td>
+  <td>
     <label for="nome">Nome: </label>
-   </td>
-   <td align="left">
+  </td>
+  <td align="left">
     <input type="text" id="nome">
-   </td>
+  </td>
 
-   <td>
+  <td>
     <label for="sobrenome">Sobrenome: </label>
-   </td>
-   <td align="left">
+  </td>
+  <td align="left">
     <input type="text" id="sobrenome">
-   </td>
+  </td>
 
 <!-- fim da primeira linha -->	
 <!-- segunda linha -->
@@ -53,8 +107,8 @@ function formatar(entrada, documento){
    </td>
    <td align="left">
     <input type="value" name="dia" size="2" maxlength="2" value="dd"> 
-   <input type="value" name="mes" size="2" maxlength="2" value="mm"> 
-   <input type="value" name="ano" size="4" maxlength="4" value="aaaa">
+    <input type="value" name="mes" size="2" maxlength="2" value="mm"> 
+    <input type="value" name="ano" size="4" maxlength="4" value="aaaa">
    </td>
   </tr>
 <!-- fim da segunda linha -->
@@ -76,23 +130,39 @@ function formatar(entrada, documento){
   </tr>
 <!-- fim da terceira linha -->
 <!-- quarta linha -->
-  </tr>
+  <tr>
    <td>
     <label for="estadocivil">Estado Civil: </label>
    </td>
    <td align="left">
-   <!-- faz a mesma função dos fanucs -->
-    <select name="estado"> 
-    <option value="estadodefault">--</option> 
-    <option value="solteiro">Solteiro</option> 
-    <option value="casado">Casado</option> 
-	<option value="separado">Separado</option> 
-	<option value="divorciado">Divorciado</option> 
-	<option value="viúvo">Viúvo</option> 
+
+  <div class="form-group">
+    <label for="exampleFormControlSelect1"></label>
+    <select class="form-control" id="exampleFormControlSelect1">
+      <option>--</option>
+      <option>Solteiro</option>
+      <option>Casado</option>
+      <option>Separado</option>
+      <option>Divorciado</option>
+      <option>Viúvo</option>
     </select>
+  </div>
+
    </td>
   </tr>
+
 <!-- fim da quarta linha -->
+
+  <td>
+    <label for="estadocivil">Sexo: </label>
+  </td> 
+  <td>
+     <input type="radio" name="sexo" value="Masculino"> Masculino
+     <br>
+     <input type="radio" name="sexo" value="Feminino"> Feminino
+  </td>
+
+
 <!-- quinta linha -->
   </tr>
    <td>
@@ -116,15 +186,19 @@ function formatar(entrada, documento){
     <label for="email">Email: </label>
    </td>
    <td align="left">
-    <input type="text" id="email" >
+    <input type="text" id="email" size="30" >
   </tr>
 <!-- fim da sexta linha -->
  </table>
+ </center>
 </fieldset>
 
 
+
+<!-- Segundo campo -->
   <fieldset>
   <legend>Endereço do usuario</legend>
+ <center>
  <table cellspacing="10">
  <!-- primeira linha -->
   <tr>
@@ -132,7 +206,7 @@ function formatar(entrada, documento){
     <label for="rua">Rua:</label>
    </td>
    <td align="left">
-    <input type="text" name="rua">
+    <input type="text" name="rua" size="34">
    </td>
 
    <td>
@@ -143,6 +217,7 @@ function formatar(entrada, documento){
    </td>
   </tr>
  <!-- fim da primeira linha -->
+
  <!-- segunda linha -->
   <tr>
    <td>
@@ -160,6 +235,7 @@ function formatar(entrada, documento){
    </td>
   </tr>
    <!-- fim da segunda linha -->
+
    <!-- terceira linha -->   
   <tr>
    <td>
@@ -199,6 +275,24 @@ function formatar(entrada, documento){
    </td>
   </tr>
   <!-- fim da terceira linha -->
+<!-- quarta linha -->
+  </tr>
+   <td>
+    <label for="estadocivil">Estado Civil: </label>
+   </td>
+   <td align="left">
+   <!-- faz a mesma função dos fanucs -->
+    <select name="estado"> 
+    <option value="estadodefault">--</option> 
+    <option value="solteiro">Solteiro</option> 
+    <option value="casado">Casado</option> 
+  <option value="separado">Separado</option> 
+  <option value="divorciado">Divorciado</option> 
+  <option value="viúvo">Viúvo</option> 
+    </select>
+   </td>
+  </tr>
+
    <!-- quarta linha -->   
   <tr>
    <td>
@@ -210,8 +304,13 @@ function formatar(entrada, documento){
   </tr>
     <!-- fim da quarta linha -->
 
-	</table>
+	</table> 
+  </center>
 </fieldset>
-</fieldset>
+
+
+
+  </div>
+</div>
 </body>
 </html>

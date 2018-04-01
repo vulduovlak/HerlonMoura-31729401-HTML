@@ -3,11 +3,52 @@
 <head>
 	<meta charset="utf-8">
 	<title> Respostas</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+
 </head>
 <body>
 
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="#">Herlon REV3.0</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
 
-<h1>Questionário </h1>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+
+      <li class="nav-item">
+        <a class="nav-link" href="index.html">Home<span class="sr-only">(current)</span></a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" href="formulario.html">Formulario</a>
+      </li>
+
+      <li class="nav-item active">
+        <a class="nav-link" href="respostas.html">Questionario</a>
+      </li>
+      
+
+    </ul>
+  </div>
+</nav>
+
+
+<!-- tipo do layout -->
+<div class="container-fluid">
+
+<!-- cor do layout -->
+	<div class="p-3 mb-2 bg-primary text-white">
+
+
+
+
+
+
+<center><h1>Questionário </h1></center>
+<hr class="button_green">
 
 	<ol>
 		<li>Os termos Web e Internet frequentemente são usados como sinônimos. 
@@ -81,7 +122,7 @@
 			<code><li>&lt;dd&gt; e &lt;dt&gt;</li></code>
 		</ol>
 
-		<li>10. As tabelas são elementos muito utilizados na elaboração de páginas HTML. Listas 
+		<li>As tabelas são elementos muito utilizados na elaboração de páginas HTML. Listas 
 		de produtos e respectivos preços são exemplos de informações formatadas e 
 		apresentadas através de tabelas na Internet. As tags HTML utilizadas para criar, 
 		respectivamente, linhas e colunas em uma tabela são: </li>
@@ -95,12 +136,11 @@
 			</ol>
 	</ol>
 	<!-- respostas -->
-
-	<table border="1"  bgcolor="white" width=500 height=100>
+	<table border="1"  bgcolor="white" width=500 height=100 >
 		<!-- Titulo -->
 		<tr>
 			<td></td>
-			<td>Questao 5</td>
+			<td class="cor-preto">Questao 5</td>
 			<td>Questao 6</td>
 			<td>Questao 7</td>
 			<td>Questao 8</td>
@@ -114,9 +154,9 @@
 			<td></td>
 			<td></td>
 			<td></td>
-			<td	bgcolor="lightgreen" title="Listas de definição não se diferenciam muito de listas comuns como as listas ordenadas e não-ordenadas.A diferença principal entre as listas comuns e a listas de definição é que listas de definição irão sempre trabalhar com dois itens que são o termo e a definição.A lista de definição fica contida dentro da tag DL.Na tag DL, há o termo descrito pela tag DT(Description Term) que por sua vez é definido posteriormente na tag DD(Description Details).">
+			<td	bgcolor="darkgreen" title="Listas de definição não se diferenciam muito de listas comuns como as listas ordenadas e não-ordenadas.A diferença principal entre as listas comuns e a listas de definição é que listas de definição irão sempre trabalhar com dois itens que são o termo e a definição.A lista de definição fica contida dentro da tag DL.Na tag DL, há o termo descrito pela tag DT(Description Term) que por sua vez é definido posteriormente na tag DD(Description Details).">
 
-			<h7>mouse</h7>
+			<center><h7>mouse</h7></center>
 				
 			</td>
 			<td></td>
@@ -172,12 +212,12 @@
  <p>Resposta da questão 2: De maneira bem resumida o endereço e convertido em um numero de ip onde esta localizado o servidor, e assim nos conectamos.</p>
 
 
- <div align="center"><!-- alinhamento central -->
+ <div class="borda" align="center"><!-- alinhamento central -->
 
 
  <video id="video" src="videos\1.mp4" frameborder="10" scrolling="no" width="600" height="338"></video><!-- declaração do video -->
  <p></p>
- <button onclick="playPause()">Play/Pause</button> <!-- criação do botão -->
+ <button onclick="playPause()">Play/Pausar</button> <!-- criação do botão -->
 
 
 <!-- chamada de função para o botão que da o start ou pause no video -->
@@ -199,9 +239,11 @@ function playPause() {
 
 
 
+		<button type="button" class="button_green" data-toggle="tooltip" data-placement="bottom" title="pplware.sapo.pt">
 
+			<a href="https://pplware.sapo.pt/informacao/pai-da-internet-explica-como-funcionam-os-enderecos-na-web/" target="_blank">	<h3>Fonte </h3> </a>
+		</button>
 
- <h4>fonte:  <a href="https://pplware.sapo.pt/informacao/pai-da-internet-explica-como-funcionam-os-enderecos-na-web/">pplware.sapo.pt</a></h4>
 
 <hr>
  <p>Resposta da questão 3:</p>
@@ -221,9 +263,8 @@ function playPause() {
 
 
 
-
-
-
+  </div>
+ </div>
 </body>
 </html>
 
