@@ -1,5 +1,5 @@
-<!DOCTYPE html>
-<html>
+﻿<!DOCTYPE html>
+<html ng-app>
 <head>
 	<title>
 		    Formulario
@@ -7,6 +7,8 @@
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" href="css/main.css">
+
+  <script src="http://code.angularjs.org/1.0.1/angular-1.0.1.min.js"></script>
 
 </head>
 <body>
@@ -59,7 +61,9 @@
 <!-- centralização do layout -->
     <div class="mx-auto" style="width: 400px;">
       <fieldset>
-      <center><legend class="sub">Cadastro de ususarios</legend></center>
+       <input type="text" ng-model="nome" onfocus="this.value = 'asdadad'" hidden>
+
+      <center><legend class="sub">Cadastro de usuario <input type="color" value="#ff0000" ng-model="nome" placeholder="de usuarios" color="black" hidden></legend></center>
     </div>
 
   <fieldset>
@@ -84,11 +88,12 @@ function formatar(entrada, documento){
 
 
 <!-- primeira linha -->
+<h4>Olá, {{ nome }}</h4>
   <td>
     <label for="nome">Nome: </label>
   </td>
   <td align="left">
-    <input type="text" id="nome">
+        <input type="text" ng-model="nome">
   </td>
 
   <td>
